@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 65%;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient( -45deg, #E0E2DB, #E0DDCF);
+}
+
+body>header {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f0ea3b;
+  box-shadow: 0px 1px 2px 0px;
+  padding: 2em;
+  /* position: fixed; */
+}
+
+main {
+  background: #f1f0ea33;
+  padding: 20px;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  line-height: 1.7em;
+}
+
+h1 {
+  margin: 0;
+  color: #493843;
+}
+
+nav {
+  padding: 0.5em;
+  display: flex;
+  width: 30%;
+  gap: 5%;
+}
+
+a {
+  position: relative;
+  width: 20%;
+  padding: 0.1em 0;
+  margin: 0 0.5em;
+  text-decoration: none;
+  color:#1A1423;
+}
+
+a::before {
+  content: " ";
+  background: #1A1423;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #03312E;
+}
+
+a:hover::before {
+  color: #03312E;
+  width: 100%;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+article > header {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+article > header > h1 {
+  font-size: 40px;
+  text-decoration: underline;
+  text-underline-offset:3px;
+}
+
+article > header > p{
+  font-size: 12px;
+  display: flex;
+  margin: 0;
+  align-self: flex-end;
+}
+
+section {
+  margin: 0.7em;
+}
+
+mark {
+  background-color: bisque;
+}
+
+figure img {
+  width: 50%;
+}
+
+details {
+  cursor: pointer;
+}
