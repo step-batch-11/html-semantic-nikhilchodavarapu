@@ -6,20 +6,22 @@ body {
   width: 65%;
   margin: 0 auto;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: linear-gradient( -45deg, #E0E2DB, #E0DDCF);
+  /* background: linear-gradient( -45deg, #E0E2DB, #E0DDCF); */
 }
 
 body>header {
   display: flex;
   justify-content: space-between;
-  background: #f1f0ea3b;
+  background: #f7f6f0;
   box-shadow: 0px 1px 2px 0px;
   padding: 2em;
-  /* position: fixed; */
+  position: sticky;
+  top: 1px;
 }
 
 main {
-  background: #f1f0ea33;
+  display: flex;
+  background: #e6e2cf3e;
   padding: 20px;
   font-size: 1.3em;
   letter-spacing: 0.05em;
@@ -38,16 +40,15 @@ nav {
   gap: 5%;
 }
 
-a {
+nav a {
   position: relative;
-  width: 20%;
   padding: 0.1em 0;
   margin: 0 0.5em;
   text-decoration: none;
   color:#1A1423;
 }
 
-a::before {
+nav a::before {
   content: " ";
   background: #1A1423;
   width: 0%;
@@ -58,11 +59,11 @@ a::before {
   transition: 0.5s;
 }
 
-a:hover {
+nav a:hover {
   color: #03312E;
 }
 
-a:hover::before {
+nav a:hover::before {
   color: #03312E;
   width: 100%;
 }
@@ -70,7 +71,7 @@ a:hover::before {
 article {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  flex: 3;
 }
 
 article > header {
@@ -92,7 +93,7 @@ article > header > p{
   align-self: flex-end;
 }
 
-section {
+section, footer {
   margin: 0.7em;
 }
 
@@ -105,5 +106,40 @@ figure img {
 }
 
 details {
+  cursor: pointer;
+}
+
+summary {
+  color: #03312E;
+}
+
+aside {
+  flex: 1;
+  align-self: stretch;
+  padding: 1em;
+  margin: 1em;
+  background: #e3e9c33c;
+}
+
+body>footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  margin: 0;
+  background: #e6e2cf5c;
+  box-shadow: 0px -1px 2px 0px;
+}
+
+dialog {
+  position: absolute;
+  top: 50%;
+  margin: auto;
+  line-height: 1.7em;
+}
+
+dialog > button {
+  padding: 0.2em 1em;
+  border-radius: 5px;
   cursor: pointer;
 }
